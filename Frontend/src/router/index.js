@@ -6,7 +6,6 @@ import NewTask from '@/components/NewTask'
 import TaskManagement from '@/components/TaskManagement'
 import Task from '@/components/Task'
 
-import TaskSubmission from '@/components/TaskSubmission'
 import TaskCenter from '@/components/TaskCenter'
 
 Vue.use(Router)
@@ -24,9 +23,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/taskSubmission',
-      name: 'TaskSubmission',
-      component: TaskSubmission
+      path: '/newtask',
+      name: 'NewTask',
+      component: NewTask
     },
     {
       path: '/taskCenter',
@@ -34,17 +33,12 @@ export default new Router({
       component: TaskCenter
     },
     {
-      path: '/newtask',
-      name: 'NewTask',
-      component: NewTask
-    },
-    {
       path: '/taskmanagement',
       name: 'TaskManagement',
       component: TaskManagement
     },
     {
-      path: '/task',
+      path: '/task/:id',
       name: 'Task',
       component: Task
     },

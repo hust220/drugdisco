@@ -1,6 +1,6 @@
 <template>
 <div class="introduction">
-  <h3>MedusaDock</h3>
+  <h3>Drugdisco</h3>
   <p>Existing flexible docking approaches model the ligand and receptor flexibility either separately or in a loosely
   coupled manner, which captures the conformational changes inefficiently. Here, we propose a flexible docking
   approach, MedusaDock, which models both ligand and receptor flexibility simultaneously with sets of discrete
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import { bus } from '../bus.js'
+
 export default {
   name: 'Home',
   data () {
@@ -43,6 +45,11 @@ export default {
     }
   },
   methods: {
+  },
+  mounted () {
+    this.$nextTick(function () {
+      bus.$emit('switch-router', 'Home')
+    })
   }
 }
 </script>

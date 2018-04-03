@@ -64,7 +64,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/medusa/dock/',
+    assetsPublicPath: '/drugdisco/',
 
     /**
      * Source Maps
